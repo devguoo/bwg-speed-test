@@ -2,6 +2,8 @@
 
 一键测试搬瓦工全球 11 个机房延迟和速度，帮你选最快的节点。
 
+> ⭐ 觉得有用？点个 Star 支持一下，也方便下次找到这个工具。
+
 [![GitHub stars](https://img.shields.io/github/stars/devguoo/bwg-speed-test?style=social)](https://github.com/devguoo/bwg-speed-test)
 [![Last Commit](https://img.shields.io/github/last-commit/devguoo/bwg-speed-test)](https://github.com/devguoo/bwg-speed-test/commits/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -143,6 +145,8 @@ A: Linux、macOS、WSL（Windows Subsystem for Linux）均可运行。
 ---
 
 ## 🔗 相关项目
+
+- 🔧 [awesome-vps-tools](https://github.com/devguoo/awesome-vps-tools) — VPS 工具合集，测速/监控/优化一站式资源
 
 - 更多搬瓦工方案详情：[bwhhost.com](https://www.bwhhost.com)
 
