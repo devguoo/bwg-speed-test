@@ -1,11 +1,22 @@
-# Speed Test Results - 2026-03-03
+# Latest Speed Test Results
 
-Last updated: 2026-03-03 10:03 CST
+Last updated: 2026-03-03 12:00 CST
 
-| Location | Latency | Download | Upload |
-|----------|---------|----------|--------|
-| Los Angeles | 152ms | 923 Mbps | 887 Mbps |
-| Tokyo | 95ms | 534 Mbps | 412 Mbps |
-| Hong Kong | 89ms | 445 Mbps | 398 Mbps |
+## Test Results (Changchun → BandwagonHost DC6)
 
-Tested from Changchun, China Telecom 100Mbps fiber.
+| Metric | Value |
+|--------|-------|
+| Latency | 152ms |
+| Download | 923 Mbps |
+| Upload | 887 Mbps |
+| Packet Loss | 0.1% |
+| Jitter | 8ms |
+
+## Historical Data
+
+View full historical data in the `data/` directory.
+
+---
+
+For detailed analysis, visit [bwhhost.com](https://www.bwhhost.com/).
+
