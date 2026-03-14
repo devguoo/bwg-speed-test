@@ -8,7 +8,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/devguoo/bwg-speed-test)](https://github.com/devguoo/bwg-speed-test/commits/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> 💡 **推荐方案**：[搬瓦工 CN2 GIA-E](https://bwh81.net/aff.php?aff=77647&pid=87) — 电信双向 CN2 GIA，国内直连速度最佳。使用优惠码 `BWHCGLUKKB` 额外节省 6.78%。
+> 💡 **推荐方案**：[搬瓦工 CN2 GIA-E](https://bwh81.net/aff.php?aff=77647&pid=87) — 电信双向 CN2 GIA，国内直连速度最佳。注意：旧优惠码 `BWHCGLUKKB` 已于 2026-03-15 实测过期。
 
 ---
 
@@ -101,8 +101,8 @@ cd bwg-speed-test
 |------|------|---------|------|------|------|
 | 20G CN2 GIA-E | 2核 1GB 20GB SSD | 1TB | 2.5Gbps | $49.99/季 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=87) |
 | 40G CN2 GIA-E | 3核 2GB 40GB SSD | 2TB | 2.5Gbps | $89.99/季 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=88) |
-| 80G CN2 GIA-E | 4核 4GB 80GB SSD | 3TB | 2.5Gbps | $55.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=89) |
-| 160G CN2 GIA-E | 6核 8GB 160GB SSD | 5TB | 5Gbps | $109.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=90) |
+| 80G CN2 GIA-E | 4核 4GB 80GB SSD | 3TB | 2.5Gbps | $56.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=89) |
+| 160G CN2 GIA-E | 6核 8GB 160GB SSD | 5TB | 5Gbps | $86.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=90) |
 
 ### 预算方案 — KVM PROMO
 
@@ -123,7 +123,7 @@ cd bwg-speed-test
 | 40G 香港 | 香港 🇭🇰 | 2核 2GB 40GB SSD | 500GB | $89.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=95) |
 | 80G 香港 | 香港 🇭🇰 | 4核 4GB 80GB SSD | 1TB | $155.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=96) |
 
-> 使用优惠码 `BWHCGLUKKB` 结账时额外节省 6.78%（高端方案用 `BWHCCNCXVV` 省 5.97%）
+> 2026-03-15 实测：`BWHCGLUKKB` 和 `BWHCCNCXVV` 在官网购物车均返回 **expired**，目前暂未发现新的公开有效优惠码。
 
 ---
 
