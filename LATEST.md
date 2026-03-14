@@ -1,16 +1,23 @@
-# Latest Speed Test Results
+# Latest Route Snapshot
 
-Last updated: 2026-03-03 12:00 CST
+Last updated: 2026-03-15 03:48 CST
 
-## Test Results (Changchun → BandwagonHost DC6)
+## Test Results (Changchun Telecom → BandwagonHost major nodes)
 
-| Metric | Value |
-|--------|-------|
-| Latency | 152ms |
-| Download | 923 Mbps |
-| Upload | 887 Mbps |
-| Packet Loss | 0.1% |
-| Jitter | 8ms |
+| Node | Line | Avg Latency | Status |
+|------|------|-------------|--------|
+| HKHK_8 | CMI | 81.8ms | Best route |
+| AEDXB_1 | Dubai | 84.7ms | Reachable again |
+| Tokyo | CN2 GIA | 195.9ms | Stable |
+| DC2 USCA_2 | QN | 225.2ms | Recovered |
+| DC6 USCA_6 | CN2 GIA-E | 250.6ms | Detour/high latency |
+| EUNL_9 | CU 9929 | 297.1ms | Detour/high latency |
+| DC8 USCA_8 | CN2 | 376.3ms | Reachable but poor |
+| DC3 / DC4 / DC9 / Osaka | Mixed | — | Unreachable |
+
+## Traceroute Note
+
+UDP traceroute from the Changchun home network is filtered immediately after the local gateway (`192.168.6.1`), so this update is based primarily on reachability and latency deltas rather than full public hop visibility.
 
 ## Historical Data
 
