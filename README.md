@@ -1,163 +1,173 @@
-# 搬瓦工测速工具 BandwagonHost Speed Test 🚀
+<div align="center">
 
-一键测试搬瓦工全球 11 个机房延迟和速度，帮你选最快的节点。
-
-> ⭐ 觉得有用？点个 Star 支持一下，也方便下次找到这个工具。
-
-[![GitHub stars](https://img.shields.io/github/stars/devguoo/bwg-speed-test?style=social)](https://github.com/devguoo/bwg-speed-test)
-[![Last Commit](https://img.shields.io/github/last-commit/devguoo/bwg-speed-test)](https://github.com/devguoo/bwg-speed-test/commits/main)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-> 💡 **推荐方案**：[搬瓦工 CN2 GIA-E](https://bwh81.net/aff.php?aff=77647&pid=87) — 电信双向 CN2 GIA，国内直连速度最佳。注意：旧优惠码 `BWHCGLUKKB` 已于 2026-03-15 实测过期。
-
----
-
-## 📊 最新测速结果
-
-<!-- AUTO-UPDATE-START: speed-results -->
-| 机房 | 位置 | 线路 | Ping (ms) | 状态 | 推荐度 |
-|------|------|------|-----------|------|--------|
-| 香港 HKHK_8 | 香港 | CMI | ~82 | ✅ 正常 | ⭐⭐⭐⭐⭐ |
-| 迪拜 AEDXB_1 | 迪拜 | — | ~85 | ✅ 正常 | ⭐⭐⭐⭐⭐ |
-| 日本东京 | 东京 | CN2 GIA | ~196 | ✅ 正常 | ⭐⭐⭐⭐ |
-| DC2 USCA_2 | 洛杉矶 | QN | ~225 | ✅ 恢复 | ⭐⭐⭐⭐ |
-| DC6 USCA_6 | 洛杉矶 | CN2 GIA-E | ~251 | ⚠️ 绕路 | ⭐⭐⭐ |
-| 荷兰 EUNL_9 | 阿姆斯特丹 | 联通9929 | ~297 | ⚠️ 绕路 | ⭐⭐⭐ |
-| DC8 USCA_8 | 洛杉矶 | CN2 | ~376 | ⚠️ 高延迟 | ⭐⭐ |
-| DC3 USCA_3 | 洛杉矶 | CN2 | — | ❌ 不可达 | — |
-| DC4 USCA_4 | 洛杉矶 | MCOM | — | ❌ 不可达 | — |
-| DC9 USCA_9 | 洛杉矶 | CN2 GIA | — | ❌ 不可达 | — |
-| 日本大阪 | 大阪 | CN2 GIA | — | ❌ 不可达 | — |
-
-> ⚠️ **2026-03-15 路由观察**：长春电信侧 UDP traceroute 在家庭网关后全部被过滤（只显示到 `192.168.6.1`），无法直接拿到完整中间 hops；因此本次以 ICMP 实测可达性为主。香港 CMI 仍是最低延迟（82ms），东京 CN2 GIA 维持可用（196ms）；DC2 已从高延迟回落到 225ms，迪拜 AEDXB_1 恢复可达并出现 85ms 低延迟，DC8 也恢复响应但延迟很高（376ms）；DC4/DC9/大阪 仍不可达，DC6/荷兰继续存在明显绕路。
->
-> 数据为参考值（测试点：长春电信），实际延迟因地区和运营商而异。运行脚本获取你的实测数据 ↓
-<!-- AUTO-UPDATE-END: speed-results -->
-
----
-
-## ⚡ 快速开始
-
-一行命令，直接跑：
-
-```bash
-bash <(curl -sL https://raw.githubusercontent.com/devguoo/bwg-speed-test/main/speed-test.sh)
+```
+  ╔══════════════════════════════════════════════════════════╗
+  ║                                                          ║
+  ║    ⚡ BandwagonHost Speed Test                           ║
+  ║    搬瓦工全球机房一键测速                                ║
+  ║                                                          ║
+  ╚══════════════════════════════════════════════════════════╝
 ```
 
-或者克隆到本地：
+**One-click speed test for all BandwagonHost (搬瓦工) data centers worldwide.**
+
+Find your fastest datacenter in seconds — CN2 GIA, Hong Kong, Japan, US, Dubai.
+
+[![Shell](https://img.shields.io/badge/Shell-Bash-green?logo=gnu-bash&logoColor=white)](test.sh)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/devguoo/bwg-speed-test?style=social)](https://github.com/devguoo/bwg-speed-test/stargazers)
+
+</div>
+
+---
+
+## ⚡ Quick Start
+
+**One command. No installation. Works on any Linux server, macOS, or WSL.**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/devguoo/bwg-speed-test/main/test.sh | bash
+```
+
+Verbose mode (shows individual ping times & packet loss):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/devguoo/bwg-speed-test/main/test.sh | bash -s -- -v
+```
+
+Or clone and run locally:
 
 ```bash
 git clone https://github.com/devguoo/bwg-speed-test.git
 cd bwg-speed-test
-./speed-test.sh
+./test.sh
 ```
 
 ---
 
-## ✨ 功能特性
+## ✨ Features
 
-- 🌍 覆盖搬瓦工全球 11 个机房（美国、日本、香港、荷兰、迪拜）
-- 📡 自动 Ping 测试，3 次取平均，结果按延迟排序
-- 🎨 彩色输出，延迟高低一目了然（绿色 <100ms / 黄色 <200ms / 红色 >200ms）
-- 🏆 自动排名，推荐最佳机房
-- 💡 内置选购建议和优惠码
-- 🔧 纯 Bash，无依赖，Linux / macOS / WSL 通用
-
----
-
-## 🗺️ 机房选择指南
-
-不知道选哪个机房？看这里：
-
-| 你的运营商 | 推荐机房 | 原因 |
-|------------|----------|------|
-| 电信 | DC6（CN2 GIA-E）| 双向 CN2 GIA，延迟最低 |
-| 联通 | DC6 或 荷兰（联通9929）| 直连线路，稳定性好 |
-| 移动 | DC6 或 香港（CMI）| CMI 对移动最友好 |
-| 需要日本 IP | 大阪 / 东京 | CN2 GIA 线路，速度快 |
-| 预算有限 | DC2/DC3（KVM PROMO）| 最低 $49.99/年起 |
-
-### CN2 vs CN2 GIA vs CN2 GIA-E 有什么区别？
-
-| 线路 | 说明 | 速度 | 价格 |
-|------|------|------|------|
-| CN2 | 电信 CN2 GT，去程普通/回程 CN2 | ★★★☆☆ | 便宜 |
-| CN2 GIA | 电信双向 CN2 GIA | ★★★★★ | 较贵 |
-| CN2 GIA-E | CN2 GIA 企业版，多机房可切换 | ★★★★★ | 性价比最高 |
-
-简单说：**CN2 GIA-E 是目前性价比最高的选择**，电信双向 CN2 GIA 保证速度，还能在后台自由切换机房。
+- 🌍 **13 datacenters** — Tests all BandwagonHost locations worldwide
+- 📡 **ICMP ping** — 4-packet average for reliable latency measurement
+- 📊 **Sorted results** — Lowest latency first, fastest highlighted with 🏆
+- 🎨 **Color-coded output** — Green/yellow/red status at a glance
+- 🔧 **Zero dependencies** — Pure Bash, needs only `ping`
+- 🖥️ **Cross-platform** — Linux, macOS, WSL
+- 🌐 **IPv6 aware** — Automatically skips IPv6 targets if unsupported
+- 📋 **Verbose mode** — `-v` flag shows individual ping times & packet loss
 
 ---
 
-## 💰 方案推荐
+## 📋 Output Example
 
-我个人使用搬瓦工 CN2 GIA-E 方案，日常延迟 150ms 左右，稳定性不错。以下是各价位推荐：
+```
+  ╔══════════════════════════════════════════════════════════╗
+  ║                                                          ║
+  ║    ⚡ BandwagonHost Speed Test                           ║
+  ║    搬瓦工全球机房一键测速                                ║
+  ║                                                          ║
+  ║    github.com/devguoo/bwg-speed-test                     ║
+  ║                                                          ║
+  ╚══════════════════════════════════════════════════════════╝
 
-### 首选 — CN2 GIA-E（DC6）
+  Testing 13 datacenters...
 
-电信双向 CN2 GIA，联通/移动直连，支持切换到日本、香港、荷兰等机房。
+  [ 1/13] DC2 QNET                      Los Angeles        152.34 ms
+  [ 2/13] DC3 CN2                        Los Angeles        148.21 ms
+  ...
 
-| 方案 | 配置 | 流量/月 | 带宽 | 价格 | 链接 |
-|------|------|---------|------|------|------|
-| 20G CN2 GIA-E | 2核 1GB 20GB SSD | 1TB | 2.5Gbps | $49.99/季 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=87) |
-| 40G CN2 GIA-E | 3核 2GB 40GB SSD | 2TB | 2.5Gbps | $89.99/季 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=88) |
-| 80G CN2 GIA-E | 4核 4GB 80GB SSD | 3TB | 2.5Gbps | $56.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=89) |
-| 160G CN2 GIA-E | 6核 8GB 160GB SSD | 5TB | 5Gbps | $86.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=90) |
+  ─────────────────────────────────────────────────────────
+  📊 Results (sorted by latency, lowest first)
+  ─────────────────────────────────────────────────────────
 
-### 预算方案 — KVM PROMO
+  Datacenter                    Location            Latency  Status
+  ──────────────────────────    ────────────────    ────────  ──────────────
+  Hong Kong CN2 GIA             Hong Kong           42.5 ms  🏆 Fastest!
+  Dubai                         Dubai, UAE          65.3 ms  ● Great
+  Japan Osaka Softbank          Osaka, Japan       102.8 ms  ● Good
+  DC6 CN2 GIA-E                 Los Angeles        148.2 ms  ● Good
+  DC3 CN2                       Los Angeles        152.3 ms  ● Good
+  DC9 CN2 GIA                   Los Angeles        155.1 ms  ● Good
+  DC2 QNET                      Los Angeles        158.7 ms  ● Good
+  DC8 ZNET                      Los Angeles        162.4 ms  ● Good
+  DC4 MCOM                      Los Angeles        165.9 ms  ● Good
+  Fremont                       Fremont, CA        172.3 ms  ● Good
+  New Jersey                    New Jersey         238.5 ms  ● Fair
+  New York                      New York           245.1 ms  ● Fair
+  Japan Tokyo CN2 GIA           Tokyo, Japan             —   ⊘ Skipped (IPv6)
 
-多机房可选，购买后后台自由切换。适合预算有限的用户。
+  💡 还没有搬瓦工？查看购买指南 → https://www.bwhhost.com
+  📊 更多 VPS 速度评测 → https://www.vps-best.com
+```
 
-| 方案 | 配置 | 流量/月 | 带宽 | 价格 | 链接 |
-|------|------|---------|------|------|------|
-| 20G KVM | 2核 1GB 20GB SSD | 1TB | 1Gbps | $49.99/年 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=44) |
-| 40G KVM | 3核 2GB 40GB SSD | 2TB | 1Gbps | $52.99/半年 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=45) |
-| 80G KVM | 4核 4GB 80GB SSD | 3TB | 1Gbps | $19.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=46) |
-
-### 日本 / 香港节点
-
-| 方案 | 位置 | 配置 | 流量/月 | 价格 | 链接 |
-|------|------|------|---------|------|------|
-| 40G 大阪 | 日本 🇯🇵 | 2核 2GB 40GB SSD | 500GB | $49.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=134) |
-| 80G 大阪 | 日本 🇯🇵 | 4核 4GB 80GB SSD | 1TB | $86.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=135) |
-| 40G 香港 | 香港 🇭🇰 | 2核 2GB 40GB SSD | 500GB | $89.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=95) |
-| 80G 香港 | 香港 🇭🇰 | 4核 4GB 80GB SSD | 1TB | $155.99/月 | [查看方案](https://bwh81.net/aff.php?aff=77647&pid=96) |
-
-> 2026-03-15 实测：`BWHCGLUKKB` 和 `BWHCCNCXVV` 在官网购物车均返回 **expired**，目前暂未发现新的公开有效优惠码。
-
----
-
-## ❓ 常见问题
-
-**Q: 搬瓦工支持什么支付方式？**
-A: 支付宝、PayPal、信用卡均可。
-
-**Q: 买了之后可以换机房吗？**
-A: CN2 GIA-E 系列支持在后台自由切换机房（DC6/DC9/日本/荷兰/香港等）。KVM PROMO 也支持切换。
-
-**Q: 可以退款吗？**
-A: 30 天内可申请退款（每个账户仅限一次）。
-
-**Q: 搬瓦工被封 IP 怎么办？**
-A: 后台可以付费更换 IP（$8.79），或者免费切换机房自动换 IP。
-
-**Q: 脚本支持什么系统？**
-A: Linux、macOS、WSL（Windows Subsystem for Linux）均可运行。
+> ⚠️ Sample output for illustration. Your actual results will vary by location and ISP.
 
 ---
 
-## 🔗 相关项目
+## 🗺️ Supported Datacenters
 
-- 🔧 [awesome-vps-tools](https://github.com/devguoo/awesome-vps-tools) — VPS 工具合集，测速/监控/优化一站式资源
+| # | Datacenter | Location | Test IP | Protocol |
+|---|-----------|----------|---------|----------|
+| 1 | DC2 QNET | Los Angeles, US | `104.194.76.1` | IPv4 |
+| 2 | DC3 CN2 | Los Angeles, US | `23.252.96.1` | IPv4 |
+| 3 | DC4 MCOM | Los Angeles, US | `98.142.136.1` | IPv4 |
+| 4 | DC6 CN2 GIA-E | Los Angeles, US | `162.244.241.103` | IPv4 |
+| 5 | DC8 ZNET | Los Angeles, US | `65.49.128.1` | IPv4 |
+| 6 | DC9 CN2 GIA | Los Angeles, US | `65.49.135.97` | IPv4 |
+| 7 | Fremont | Fremont, CA, US | `184.106.214.1` | IPv4 |
+| 8 | New Jersey | New Jersey, US | `23.29.138.5` | IPv4 |
+| 9 | New York | New York, US | `208.167.227.1` | IPv4 |
+| 10 | Japan Osaka Softbank | Osaka, Japan | `185.212.59.1` | IPv4 |
+| 11 | Japan Tokyo CN2 GIA | Tokyo, Japan | `2607:f130:0:17e::3b2a` | IPv6 |
+| 12 | Hong Kong CN2 GIA | Hong Kong | `93.179.124.161` | IPv4 |
+| 13 | Dubai | Dubai, UAE | `45.154.3.1` | IPv4 |
 
-- 更多搬瓦工方案详情：[bwhhost.com](https://www.bwhhost.com)
+---
+
+## ❓ FAQ
+
+**Q: What does this script actually do?**
+A: It sends ICMP ping packets (4 pings per datacenter) to each BandwagonHost test IP and measures the average round-trip time.
+
+**Q: Is it safe to run via `curl | bash`?**
+A: The script is open source — you can [inspect it here](test.sh) before running. It only uses `ping` and standard shell utilities. No data is collected or sent anywhere.
+
+**Q: Why is a datacenter showing "Timeout"?**
+A: Some datacenters may block ICMP from certain networks, or there may be routing issues. This doesn't necessarily mean the datacenter is down.
+
+**Q: What about the IPv6 datacenter (Tokyo CN2 GIA)?**
+A: The script auto-detects IPv6 support. If your server doesn't have IPv6 connectivity, Tokyo CN2 GIA will be skipped automatically.
+
+**Q: Can I run this on macOS?**
+A: Yes! The script works on Linux, macOS, and WSL.
+
+**Q: How do I choose the right datacenter?**
+A: Run this test from your target server's network. The lowest latency datacenter is generally the best choice for your location.
+
+---
+
+## ⭐ Star History
+
+If you find this useful, give it a Star! It helps others discover the tool.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=devguoo/bwg-speed-test&type=Date)](https://star-history.com/#devguoo/bwg-speed-test&Date)
+
+---
+
+## 📚 Related Resources
+
+- 💡 搬瓦工购买指南和方案对比 → [bwhhost.com](https://www.bwhhost.com)
+- 📊 VPS 速度评测与推荐 → [vps-best.com](https://www.vps-best.com)
+- 🌐 搬瓦工中文教程 → [world-vps.com](https://www.world-vps.com)
+
+---
+
+## 📝 Topics
+
+`bandwagonhost` `bwg` `speed-test` `ping-test` `vps` `cn2-gia` `datacenter` `latency` `network-tools` `server-tools` `china-optimized` `bash-script` `one-click` `hong-kong` `japan` `los-angeles` `linux-tools` `devops` `cloud` `benchmark`
 
 ---
 
 ## License
 
-[MIT](LICENSE)
-
-## 免责声明
-
-本项目仅提供网络测速工具和信息整理，不对任何购买行为负责。价格和方案以搬瓦工官网实际显示为准。部分链接为推广链接，通过这些链接购买不会增加您的费用，但我们可能获得少量佣金支持项目维护。
+[MIT](LICENSE) — Use it, fork it, improve it.
