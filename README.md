@@ -48,11 +48,13 @@ cd bwg-speed-test
 ## 📡 Latest Real-World Route Snapshot
 
 <!-- AUTO-UPDATE-START: speed-results -->
-Latest manual snapshot from Changchun Telecom: **2026-04-01 03:39 CST**
+Latest manual snapshot from Changchun Telecom: **2026-04-15 03:35 CST**
 
-- HKHK_8 (CMI): **109.5ms** — current best
-- Tokyo (CN2 GIA): **194.7ms** — stable
-- DC6 (CN2 GIA-E): **223.3ms** — reachable, but still detoured
+- HKHK_8 (CMI): **72.1ms** — best route, big improvement
+- Tokyo (CN2 GIA): **196.3ms** — stable
+- DC6 (CN2 GIA-E): **229.5ms** — recovered to prior range
+- DC4 (MCOM): **230.7ms** — reachable again, but jittery
+- DC2 (QN): **279.7ms** — reachable, clearly slower
 - DC9 (CN2 GIA): **unreachable** in this sample
 <!-- AUTO-UPDATE-END: speed-results -->
 
