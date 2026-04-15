@@ -188,3 +188,7 @@ If you find this useful, give it a Star! It helps others discover the tool.
 ## License
 
 [MIT](LICENSE) — Use it, fork it, improve it.
+
+---
+
+> 📅 Last maintained: 2026-04-15
