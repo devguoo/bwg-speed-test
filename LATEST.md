@@ -1,6 +1,6 @@
 # Latest Route Snapshot
 
-Last updated: 2026-04-15 03:35 CST
+Last updated: 2026-05-11 08:48 CST
 Source: Changchun Telecom home network
 
 ## Ping Results
@@ -51,3 +51,6 @@ Additional route-check pings:
 ---
 
 For detailed buying and routing analysis, visit [bwhhost.com](https://www.bwhhost.com/).
+## Maintenance Note
+
+> Snapshot data unchanged since 2026-04-15. Next full re-test scheduled when network conditions change.
