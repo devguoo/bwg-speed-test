@@ -1,18 +1,32 @@
-# BandwagonHost Speed Test
+# 搬瓦工测速与机房选择 / BandwagonHost Speed Test
 
-One-click latency test and datacenter reference for BandwagonHost VPS.
+中文用户优先：这个仓库用于辅助判断搬瓦工 VPS 机房、线路和套餐选择。最终目的是让你在购买前先看清预算、用途、线路、库存和可选机房，减少买错套餐的概率。
 
-中文用户：如果你主要想判断搬瓦工 CN2 GIA-E、香港、东京、大阪、新加坡等机房怎么选，可以直接看下方中文文档和购买前工具入口。
+## 中文用户快速入口
 
-## Project Status
+如果你正在准备购买搬瓦工，建议按这个顺序看：
 
-This repository is maintained as a lightweight route-testing and datacenter reference project. It favors practical testing notes, public test targets and calm buying research over promotional copy.
+1. [先用套餐推荐器缩小选择范围](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_cn_top_selector)
+2. [查看当前库存和补货状态](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_cn_top_stock)
+3. [阅读套餐和机房选择说明](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_cn_top_plans)
+4. [需要购买流程时看中文购买教程](https://www.bwhguide.com/buy/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_cn_top_buy)
+
+常用中文文档：
+
+- [搬瓦工机房怎么选](docs/zh-cn/datacenters.md)
+- [CN2 GIA-E、香港、东京、大阪怎么理解](docs/zh-cn/cn2-gia.md)
+- [库存和补货怎么看](docs/zh-cn/stock-monitor.md)
+- [套餐推荐器怎么用](docs/zh-cn/vps-selector.md)
+
+## English Summary
+
+One-click latency test and datacenter reference for BandwagonHost VPS. This repository is maintained as a lightweight route-testing and datacenter reference project. It favors practical testing notes, public test targets and calm buying research over promotional copy.
 
 Useful links:
 
 - Documentation site: <https://devguoo.github.io/bwg-speed-test/>
-- Chinese plan selector: <https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_selector>
-- Stock monitor: <https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_stock>
+- Chinese plan selector: <https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_en_selector>
+- Stock monitor: <https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_en_stock>
 
 ## What This Repository Solves
 
