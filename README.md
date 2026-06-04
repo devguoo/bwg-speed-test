@@ -4,6 +4,16 @@ One-click latency test and datacenter reference for BandwagonHost VPS.
 
 中文用户：如果你主要想判断搬瓦工 CN2 GIA-E、香港、东京、大阪、新加坡等机房怎么选，可以直接看下方中文文档和购买前工具入口。
 
+## Project Status
+
+This repository is maintained as a lightweight route-testing and datacenter reference project. It favors practical testing notes, public test targets and calm buying research over promotional copy.
+
+Useful links:
+
+- Documentation site: <https://devguoo.github.io/bwg-speed-test/>
+- Chinese plan selector: <https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_selector>
+- Stock monitor: <https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_stock>
+
 ## What This Repository Solves
 
 This repository helps you:
@@ -112,6 +122,13 @@ For Chinese users, lower latency usually matters, but stock, route stability and
 
 The latest manually recorded route snapshot is kept in [LATEST.md](LATEST.md). It is a reference sample, not a guarantee for every network.
 
+## Maintenance Policy
+
+- Add public test targets only after they are manually verified.
+- Keep buying links secondary to testing and documentation.
+- Do not publish API keys, account data, private dashboards or affiliate backend screenshots.
+- Use issues or pull requests for datacenter updates, broken targets or documentation fixes.
+
 ## FAQ
 
 ### Is this an official BandwagonHost project?
@@ -138,6 +155,10 @@ Yes. Run the test from a network close to your target users. Then compare the re
 ## Disclaimer
 
 This repository is independently maintained and is not affiliated with BandwagonHost. Network routes, pricing, stock and datacenter availability can change. Always verify final product details on the order page before purchasing.
+
+## Contributing
+
+Small corrections are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
 
 ## License
 
