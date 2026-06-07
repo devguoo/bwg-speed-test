@@ -1,10 +1,12 @@
-# VPS Benchmark Results
+# Sample VPS Benchmark Results
 
 Last updated: 2026-03-31 22:40 UTC
 
+This file shows a safe benchmark-note format for public GitHub documentation. The original host identifier, server IP and private account details are intentionally omitted.
+
 ## System Information
 
-- **Hostname**: quick-path-6.localdomain
+- **Host**: anonymized BandwagonHost VPS sample
 - **Kernel**: Linux 6.8.0-100-generic
 - **CPU Model**: AMD EPYC-Genoa Processor
 - **CPU Cores**: 3
@@ -29,7 +31,7 @@ Last updated: 2026-03-31 22:40 UTC
 
 ## Notes
 
-- Tests performed on搬瓦工 VPS (65.49.212.223)
-- Network tests show excellent connectivity to Cloudflare CDN
-- Disk read performance benefits from system cache
-- CPU: AMD EPYC-Genoa, suitable for compute workloads
+- Tests were performed on a BandwagonHost VPS sample. The server IP and account details are not published.
+- Network tests showed strong connectivity to nearby CDN targets in this sample, but results vary by datacenter, ISP, time of day and test method.
+- Disk read performance can benefit from system cache, so repeated read tests should not be treated as guaranteed sustained disk throughput.
+- CPU, memory, disk and network numbers are reference data only. Always compare them with your own workload and current order-page configuration.

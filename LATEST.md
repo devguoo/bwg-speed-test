@@ -1,7 +1,7 @@
 # Latest Route Snapshot
 
 Last updated: 2026-05-16 16:48 CST
-Source: Changchun Telecom home network
+Source: China Telecom residential network sample, exact location and IP omitted
 
 ## Ping Results
 

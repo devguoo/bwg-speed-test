@@ -5,27 +5,33 @@ set -u
 COUNT=4
 TIMEOUT=3
 VERBOSE=0
+MARKDOWN=0
 
 usage() {
   cat <<'EOF'
 BandwagonHost Speed Test
 
 Usage:
-  ./test.sh [-c count] [-t timeout_seconds] [-v]
+  ./test.sh [-c count] [-t timeout_seconds] [-v] [-m]
 
 Options:
   -c  Ping count per target. Default: 4
   -t  Timeout seconds. Default: 3
   -v  Verbose ping output
+  -m  Print the sorted result table in Markdown format
   -h  Show help
+
+Notes:
+  Ping is only a quick route signal. Some networks or datacenters may block ICMP.
 EOF
 }
 
-while getopts "c:t:vh" opt; do
+while getopts "c:t:vmh" opt; do
   case "$opt" in
     c) COUNT="$OPTARG" ;;
     t) TIMEOUT="$OPTARG" ;;
     v) VERBOSE=1 ;;
+    m) MARKDOWN=1 ;;
     h) usage; exit 0 ;;
     *) usage; exit 1 ;;
   esac
@@ -153,11 +159,19 @@ done
 
 echo
 echo "Results sorted by latency"
-printf '%-24s %-14s %-16s %s\n' "Datacenter" "Location" "Latency" "Status"
-printf '%-24s %-14s %-16s %s\n' "----------" "--------" "-------" "------"
-sort -n "$tmp_file" | while IFS=$'\t' read -r _ name location _ip latency status; do
-  printf '%-24s %-14s %-16s %s\n' "$name" "$location" "$latency" "$status"
-done
+if [ "$MARKDOWN" -eq 1 ]; then
+  printf '| Datacenter | Location | Latency | Status |\n'
+  printf '|---|---|---:|---|\n'
+  sort -n "$tmp_file" | while IFS=$'\t' read -r _ name location _ip latency status; do
+    printf '| %s | %s | %s | %s |\n' "$name" "$location" "$latency" "$status"
+  done
+else
+  printf '%-24s %-14s %-16s %s\n' "Datacenter" "Location" "Latency" "Status"
+  printf '%-24s %-14s %-16s %s\n' "----------" "--------" "-------" "------"
+  sort -n "$tmp_file" | while IFS=$'\t' read -r _ name location _ip latency status; do
+    printf '%-24s %-14s %-16s %s\n' "$name" "$location" "$latency" "$status"
+  done
+fi
 
 cat <<'EOF'
 

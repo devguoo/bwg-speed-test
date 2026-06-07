@@ -4,6 +4,15 @@ This documentation is a practical reference for BandwagonHost latency testing, d
 
 中文用户如果主要想判断“搬瓦工哪个机房适合自己”，可以直接从中文文档开始。
 
+## 中文用户怎么用这个页面
+
+如果你是从百度、Google、GitHub 或别人分享的链接进来，建议按下面顺序走：
+
+1. 不确定买哪款：先用[搬瓦工套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_flow_selector)。
+2. 已经有目标套餐：再看[库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_flow_stock)。
+3. 纠结机房线路：阅读[搬瓦工机房怎么选](zh-cn/datacenters.md)。
+4. 想自己验证：回到 GitHub 仓库运行 `test.sh` 测你当前网络的延迟。
+
 ## Start Here
 
 | Topic | Best For | Link |
@@ -22,6 +31,15 @@ This documentation is a practical reference for BandwagonHost latency testing, d
 2. Compare route direction instead of only looking at the lowest ping.
 3. Check stock, billing cycle and available datacenters before choosing a plan.
 4. Use a plan selector or stock monitor if you are not sure which series to start with.
+
+## What The Test Can And Cannot Tell You
+
+| Signal | Useful For | Limitation |
+|---|---|---|
+| Ping latency | Quick comparison from your own network | ICMP may be filtered or unstable |
+| Timeout | Finding unreachable or filtered targets | It does not prove a product is sold out |
+| Route direction | Comparing Hong Kong, Tokyo, Osaka, US west and other choices | Real application performance also depends on bandwidth and congestion |
+| Stock monitor | Preparing alternatives when a plan is unavailable | Final stock and price still depend on the order page |
 
 Useful Chinese tools:
 

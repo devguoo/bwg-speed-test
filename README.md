@@ -1,6 +1,15 @@
 # 搬瓦工测速与机房选择 / BandwagonHost Speed Test
 
-中文用户优先：这个仓库用于辅助判断搬瓦工 VPS 机房、线路和套餐选择。最终目的是让你在购买前先看清预算、用途、线路、库存和可选机房，减少买错套餐的概率。
+面向中文用户的 BandwagonHost / 搬瓦工 VPS 测速、机房选择和购买前判断仓库。它不是广告页，也不代替最终购买页；它的价值是让你先用本地网络测一遍线路，再结合库存、套餐系列和预算做选择，减少买错机房或买错套餐的概率。
+
+## 10 秒快速判断
+
+| 你现在的问题 | 先看这里 | 作用 |
+|---|---|---|
+| 不知道买哪款 | [套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_decision) | 按用途、区域、预算先给一个方向 |
+| 担心缺货 | [库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_stock) | 看热门套餐和替代方案 |
+| 不懂机房 | [机房选择说明](docs/zh-cn/datacenters.md) | 对比 CN2 GIA-E、香港、东京、大阪、KVM |
+| 想自己测速 | [`test.sh`](test.sh) | 从你的网络测试公开目标延迟 |
 
 ## 中文用户快速入口
 
@@ -68,11 +77,32 @@ Options:
 ./test.sh -c 6       # ping count
 ./test.sh -t 3       # timeout seconds
 ./test.sh -v         # verbose ping output
+./test.sh -m         # markdown table output
+```
+
+## Example Output
+
+The script prints progress first, then sorts reachable targets by latency. A real run will depend on your own ISP, region and time of day:
+
+```text
+Results sorted by latency
+Datacenter               Location       Latency          Status
+----------               --------       -------          ------
+Hong Kong CN2 GIA        Hong Kong      76.8ms           Great
+Tokyo CN2 GIA            Tokyo          185.4ms          Fair
+DC6 CN2 GIA-E            Los Angeles    228.6ms          Fair
+DC2 QNET                 Los Angeles    -                Timeout
+```
+
+For issue reports or route notes, use Markdown output:
+
+```bash
+./test.sh -c 3 -t 2 -m
 ```
 
 ## Supported Test Targets
 
-These are public test targets collected for route and latency comparison. Some locations may block ICMP or change test IPs over time, so timeout does not always mean the product is unavailable.
+These are public test targets collected for route and latency comparison. Some locations may block ICMP or change test IPs over time, so timeout does not always mean the product is unavailable. New locations are added only after a public test target is verified.
 
 | Datacenter | Location | Test target | Protocol | Notes |
 |---|---|---:|---|---|
@@ -90,7 +120,7 @@ These are public test targets collected for route and latency comparison. Some l
 | Hong Kong CN2 GIA | Hong Kong | `93.179.124.161` | IPv4 | Common Asia reference |
 | Dubai | Dubai | `45.154.3.1` | IPv4 | Middle East reference |
 
-If a new datacenter appears, add it only after a public test target is verified.
+Recently announced product locations, such as Singapore SG_8, are not added here until a stable public test target is verified.
 
 ## How To Read Results
 
@@ -132,9 +162,10 @@ For Chinese users, lower latency usually matters, but stock, route stability and
 - [Speed test notes](docs/en/speed-test.md)
 - [BandwagonHost datacenter overview](docs/en/datacenters.md)
 
-## Latest Snapshot
+## Benchmark And Snapshot Files
 
-The latest manually recorded route snapshot is kept in [LATEST.md](LATEST.md). It is a reference sample, not a guarantee for every network.
+- [LATEST.md](LATEST.md) keeps a manually recorded route snapshot. It is a reference sample, not a guarantee for every network.
+- [BENCHMARK.md](BENCHMARK.md) shows an anonymized benchmark format. Do not publish your own server IP, hostname, account data or backend screenshots in benchmark notes.
 
 ## Maintenance Policy
 
