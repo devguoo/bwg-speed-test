@@ -1,55 +1,80 @@
-# BandwagonHost Speed Test Docs
+# 搬瓦工测速与机房选择
 
-This documentation is a practical reference for BandwagonHost latency testing, datacenter comparison and buying research. It is designed for users who want to test first, compare routes and stock, then make a calmer VPS decision.
+这个页面面向正在比较 BandwagonHost / 搬瓦工 VPS 的中文用户：先判断自己适合哪个套餐系列和机房，再用测速脚本辅助确认，最后回到套餐页核对库存、价格、付款周期和可选机房。
 
-中文用户如果主要想判断“搬瓦工哪个机房适合自己”，可以直接从中文文档开始。
+这里更像一个购买前的技术检查清单，帮助你少走“只看最低价、只看一次 ping、只盯一款缺货套餐”的弯路。最终库存、价格、可选机房和付款周期仍以购买页显示为准。
 
-## 中文用户怎么用这个页面
+## 先做 3 个判断
 
-如果你是从百度、Google、GitHub 或别人分享的链接进来，建议按下面顺序走：
-
-1. 不确定买哪款：先用[搬瓦工套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_flow_selector)。
-2. 已经有目标套餐：再看[库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_flow_stock)。
-3. 纠结机房线路：阅读[搬瓦工机房怎么选](zh-cn/datacenters.md)。
-4. 想自己验证：回到 GitHub 仓库运行 `test.sh` 测你当前网络的延迟。
-
-## Start Here
-
-| Topic | Best For | Link |
+| 你的状态 | 建议先看 | 目的 |
 |---|---|---|
-| Datacenter choice | Compare CN2 GIA-E, Hong Kong, Tokyo, Osaka, Singapore and other routes | [中文：搬瓦工机房怎么选](zh-cn/datacenters.md) |
-| CN2 GIA routes | Understand CN2 GIA-E and Asia routes before buying | [中文：CN2 GIA-E 线路说明](zh-cn/cn2-gia.md) |
-| Singapore SG_8 | Understand the new Singapore CN2 GIA direction before buying | [中文：新加坡 CN2 GIA 说明](zh-cn/singapore.md) |
-| Stock monitor | Check popular plans and alternatives when some plans are sold out | [中文：库存和补货怎么看](zh-cn/stock-monitor.md) |
-| VPS selector | Narrow down plan choices by use case, region and budget | [中文：套餐推荐器怎么用](zh-cn/vps-selector.md) |
-| KiwiVM | Understand common control panel operations after purchase | [中文：KiwiVM 常用功能](zh-cn/kiwivm.md) |
-| Speed test | Run the test script and read latency results | [English: speed test notes](en/speed-test.md) |
-| Datacenter overview | English overview of common BandwagonHost locations | [English: datacenter overview](en/datacenters.md) |
+| 完全不知道买哪款 | [搬瓦工套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_top_selector) | 按用途、访问区域、预算和使用周期缩小范围 |
+| 已经有目标套餐 | [搬瓦工库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_top_stock) | 判断是否有货，以及缺货时看哪些替代方案 |
+| 纠结香港/东京/大阪/新加坡/CN2 GIA-E | [搬瓦工机房怎么选](zh-cn/datacenters.md) | 先理解机房和线路差异，再决定是否需要测速 |
 
-## Recommended Buying Research Flow
+## 新手推荐路径
 
-1. Run the speed test from the network you care about.
-2. Compare route direction instead of only looking at the lowest ping.
-3. Check stock, billing cycle and available datacenters before choosing a plan.
-4. Use a plan selector or stock monitor if you are not sure which series to start with.
+1. 先用[套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_flow_selector)判断一个主方向。
+2. 再看[库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_flow_stock)，确认热门套餐是否有货。
+3. 如果还在 CN2 GIA-E、香港、东京、大阪、新加坡之间犹豫，阅读[机房选择说明](zh-cn/datacenters.md)。
+4. 如果你想自己验证当前网络到各机房的延迟，回到 GitHub 仓库运行 `test.sh`。
+5. 最后进入[套餐和机房选择页](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_flow_plans)核对价格、付款周期和可选机房。
 
-## What The Test Can And Cannot Tell You
+## 常见搜索问题
 
-| Signal | Useful For | Limitation |
-|---|---|---|
-| Ping latency | Quick comparison from your own network | ICMP may be filtered or unstable |
-| Timeout | Finding unreachable or filtered targets | It does not prove a product is sold out |
-| Route direction | Comparing Hong Kong, Tokyo, Osaka, Singapore, US west and other choices | Real application performance also depends on bandwidth and congestion |
-| Stock monitor | Preparing alternatives when a plan is unavailable | Final stock and price still depend on the order page |
+| 问题 | 推荐阅读 |
+|---|---|
+| 搬瓦工哪个机房适合中国用户？ | [搬瓦工机房怎么选](zh-cn/datacenters.md) |
+| CN2 GIA-E、香港、东京、大阪、新加坡有什么区别？ | [CN2 GIA-E 线路说明](zh-cn/cn2-gia.md) |
+| 新加坡 SG_8 要不要买？ | [新加坡 CN2 GIA / SG_8 购买前怎么看](zh-cn/singapore.md) |
+| 搬瓦工缺货时怎么看替代方案？ | [库存和补货怎么看](zh-cn/stock-monitor.md) |
+| 推荐器为什么会给出这个套餐？ | [套餐推荐器怎么用](zh-cn/vps-selector.md) |
+| 买完后 KiwiVM 可以做什么？ | [KiwiVM 常用功能](zh-cn/kiwivm.md) |
 
-Useful Chinese tools:
+## 测速脚本能告诉你什么
 
-- [搬瓦工套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_selector)
-- [搬瓦工库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_stock)
-- [搬瓦工套餐和机房选择](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=docs_home_plans)
+测速脚本适合回答这些问题：
 
-## Repository
+- 你当前网络到几个公开测试目标的延迟大概是多少；
+- 哪些机房在你的网络下明显 timeout；
+- 多次测试后，哪个方向更稳定；
+- 是否需要把香港、东京、大阪、新加坡和 CN2 GIA-E 放在一起比较。
 
-The source repository is available at [devguoo/bwg-speed-test](https://github.com/devguoo/bwg-speed-test).
+测速脚本不能直接回答这些问题：
 
-This project is independently maintained and is not affiliated with BandwagonHost. Network routes, pricing, stock and datacenter availability can change. Always verify final details on the actual order page before purchase.
+- 当前套餐是否有货；
+- 当前购买页最终价格是多少；
+- 你的业务长期是否一定稳定；
+- 某个新机房是否一定适合所有人。
+
+## 中文文档
+
+| 页面 | 适合场景 |
+|---|---|
+| [搬瓦工机房怎么选](zh-cn/datacenters.md) | 购买前比较机房、线路和访问区域 |
+| [CN2 GIA-E、香港、东京、大阪、新加坡怎么理解](zh-cn/cn2-gia.md) | 解释常见线路和亚洲机房选择 |
+| [新加坡 CN2 GIA / SG_8 购买前怎么看](zh-cn/singapore.md) | 判断新加坡新机房是否值得优先关注 |
+| [库存和补货怎么看](zh-cn/stock-monitor.md) | 热门套餐缺货时准备替代方案 |
+| [套餐推荐器怎么用](zh-cn/vps-selector.md) | 用工具缩小选择范围 |
+| [KiwiVM 常用功能](zh-cn/kiwivm.md) | 购买后理解控制面板常用功能 |
+
+## English Notes
+
+This project provides a lightweight BandwagonHost latency test script and datacenter reference. English readers can start with:
+
+- [Speed test notes](en/speed-test.md)
+- [Datacenter overview](en/datacenters.md)
+- [GitHub repository](https://github.com/devguoo/bwg-speed-test)
+
+## 购买前提醒
+
+- 不要只看最低价，线路和机房更重要。
+- 不要只看一次 ping，多测几次更可靠。
+- 缺货时先准备同系列或相邻机房替代方案。
+- 最终库存、价格、退款条件和服务条款以购买页显示为准。
+
+更多中文购买判断可以看：
+
+- [搬瓦工套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_bottom_selector)
+- [搬瓦工库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_bottom_stock)
+- [搬瓦工套餐和机房选择](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_bottom_plans)
