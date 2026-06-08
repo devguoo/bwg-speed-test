@@ -25,6 +25,7 @@
 | 问题 | 推荐阅读 |
 |---|---|
 | 搬瓦工哪个机房适合中国用户？ | [搬瓦工机房怎么选](zh-cn/datacenters.md) |
+| 搬瓦工测速和测试 IP 怎么看？ | [搬瓦工测速和测试 IP 怎么用](zh-cn/speed-test-guide.md) |
 | CN2 GIA-E、香港、东京、大阪、新加坡有什么区别？ | [CN2 GIA-E 线路说明](zh-cn/cn2-gia.md) |
 | 新加坡 SG_8 要不要买？ | [新加坡 CN2 GIA / SG_8 购买前怎么看](zh-cn/singapore.md) |
 | 搬瓦工缺货时怎么看替代方案？ | [库存和补货怎么看](zh-cn/stock-monitor.md) |
@@ -52,6 +53,7 @@
 | 页面 | 适合场景 |
 |---|---|
 | [搬瓦工机房怎么选](zh-cn/datacenters.md) | 购买前比较机房、线路和访问区域 |
+| [搬瓦工测速和测试 IP 怎么用](zh-cn/speed-test-guide.md) | 自己测试延迟前先理解测速结果怎么解读 |
 | [CN2 GIA-E、香港、东京、大阪、新加坡怎么理解](zh-cn/cn2-gia.md) | 解释常见线路和亚洲机房选择 |
 | [新加坡 CN2 GIA / SG_8 购买前怎么看](zh-cn/singapore.md) | 判断新加坡新机房是否值得优先关注 |
 | [库存和补货怎么看](zh-cn/stock-monitor.md) | 热门套餐缺货时准备替代方案 |
