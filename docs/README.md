@@ -17,8 +17,9 @@ This documentation is a practical reference for BandwagonHost latency testing, d
 
 | Topic | Best For | Link |
 |---|---|---|
-| Datacenter choice | Compare CN2 GIA-E, Hong Kong, Tokyo, Osaka and other routes | [中文：搬瓦工机房怎么选](zh-cn/datacenters.md) |
+| Datacenter choice | Compare CN2 GIA-E, Hong Kong, Tokyo, Osaka, Singapore and other routes | [中文：搬瓦工机房怎么选](zh-cn/datacenters.md) |
 | CN2 GIA routes | Understand CN2 GIA-E and Asia routes before buying | [中文：CN2 GIA-E 线路说明](zh-cn/cn2-gia.md) |
+| Singapore SG_8 | Understand the new Singapore CN2 GIA direction before buying | [中文：新加坡 CN2 GIA 说明](zh-cn/singapore.md) |
 | Stock monitor | Check popular plans and alternatives when some plans are sold out | [中文：库存和补货怎么看](zh-cn/stock-monitor.md) |
 | VPS selector | Narrow down plan choices by use case, region and budget | [中文：套餐推荐器怎么用](zh-cn/vps-selector.md) |
 | KiwiVM | Understand common control panel operations after purchase | [中文：KiwiVM 常用功能](zh-cn/kiwivm.md) |
@@ -38,7 +39,7 @@ This documentation is a practical reference for BandwagonHost latency testing, d
 |---|---|---|
 | Ping latency | Quick comparison from your own network | ICMP may be filtered or unstable |
 | Timeout | Finding unreachable or filtered targets | It does not prove a product is sold out |
-| Route direction | Comparing Hong Kong, Tokyo, Osaka, US west and other choices | Real application performance also depends on bandwidth and congestion |
+| Route direction | Comparing Hong Kong, Tokyo, Osaka, Singapore, US west and other choices | Real application performance also depends on bandwidth and congestion |
 | Stock monitor | Preparing alternatives when a plan is unavailable | Final stock and price still depend on the order page |
 
 Useful Chinese tools:
