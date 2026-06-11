@@ -23,7 +23,8 @@
 3. 用[套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_flow_selector)拿到一个主方向。
 4. 看[库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_flow_stock)，确认目标套餐是否有货。
 5. 再用本仓库的 `test.sh` 或公开测试 IP 做延迟参考。
-6. 最后到[套餐和机房选择页](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_flow_plans)核对可选机房、价格和付款周期。
+6. 测完后看[测速结果怎么对应套餐选择](result-to-plan.md)，把延迟结果转成购买前判断。
+7. 最后到[套餐和机房选择页](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_flow_plans)核对可选机房、价格和付款周期。
 
 ## 使用 test.sh 快速测速
 
@@ -93,6 +94,7 @@ curl -fsSL https://raw.githubusercontent.com/devguoo/bwg-speed-test/main/test.sh
 
 ## 相关入口
 
+- [测速结果怎么对应套餐选择](result-to-plan.md)
 - [搬瓦工套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_related_selector)
 - [搬瓦工库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_related_stock)
 - [搬瓦工套餐和机房选择](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_speed_guide_related_plans)

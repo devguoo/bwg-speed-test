@@ -40,6 +40,7 @@
 - 先用[套餐推荐器](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_datacenters_newbie_selector)确定预算和用途；
 - 再看[库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_datacenters_newbie_stock)确认是否有货；
 - 最后用本仓库 `test.sh` 对公开测试目标做延迟参考。
+- 测完后看[测速结果怎么对应套餐选择](result-to-plan.md)，不要只按一次最低延迟下单。
 
 ### 面向中文用户访问
 
@@ -82,6 +83,8 @@
 
 测速只是辅助。最终购买仍要看套餐页是否有货、是否可选目标机房、价格和付款周期是否合适。
 
+如果你已经跑完 `test.sh`，但不知道结果怎么对应到套餐选择，可以继续看：[测速结果怎么对应套餐选择](result-to-plan.md)。
+
 ## 新加坡 SG_8 怎么看
 
 新加坡 CN2 GIA / SG_8 是亚洲方向的新选择，适合和香港、东京、大阪、洛杉矶 CN2 GIA-E 一起比较。它的意义是多一个亚洲备选，而不是天然替代所有老机房。
@@ -122,6 +125,7 @@
 - [使用套餐推荐器缩小范围](https://www.bwhguide.com/tools/vps-selector/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_datacenters_bottom_selector)
 - [查看库存和补货状态](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_datacenters_bottom_stock)
 - [查看套餐和机房选择页](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=zh_datacenters_bottom_plans)
+- [测速结果怎么对应套餐选择](result-to-plan.md)
 - [阅读 CN2 GIA-E 线路说明](cn2-gia.md)
 - [阅读新加坡 SG_8 购买前说明](singapore.md)
 

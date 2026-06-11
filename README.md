@@ -10,6 +10,7 @@
 | 担心缺货 | [库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=repo&utm_campaign=bwg_speed_test&utm_content=readme_top_stock) | 看热门套餐和替代方案 |
 | 不懂机房 | [机房选择说明](docs/zh-cn/datacenters.md) | 对比 CN2 GIA-E、香港、东京、大阪、新加坡、KVM |
 | 想自己测速 | [测速和测试 IP 使用说明](docs/zh-cn/speed-test-guide.md) | 先理解测速能回答什么，再运行 `test.sh` |
+| 测完不知道买哪款 | [测速结果怎么对应套餐选择](docs/zh-cn/result-to-plan.md) | 把延迟、timeout、库存和预算连成购买判断 |
 
 ## 中文用户快速入口
 
@@ -24,6 +25,7 @@
 
 - [搬瓦工机房怎么选](docs/zh-cn/datacenters.md)
 - [搬瓦工测速和测试 IP 怎么用](docs/zh-cn/speed-test-guide.md)
+- [测速结果怎么对应套餐选择](docs/zh-cn/result-to-plan.md)
 - [CN2 GIA-E、香港、东京、大阪、新加坡怎么理解](docs/zh-cn/cn2-gia.md)
 - [新加坡 CN2 GIA / SG_8 购买前怎么看](docs/zh-cn/singapore.md)
 - [库存和补货怎么看](docs/zh-cn/stock-monitor.md)
@@ -149,6 +151,7 @@ For Chinese users, lower latency usually matters, but stock, route stability and
 
 - [搬瓦工机房怎么选](docs/zh-cn/datacenters.md)
 - [搬瓦工测速和测试 IP 怎么用](docs/zh-cn/speed-test-guide.md)
+- [测速结果怎么对应套餐选择](docs/zh-cn/result-to-plan.md)
 - [CN2 GIA-E、香港、东京、大阪、新加坡怎么理解](docs/zh-cn/cn2-gia.md)
 - [新加坡 CN2 GIA / SG_8 购买前怎么看](docs/zh-cn/singapore.md)
 - [库存和补货怎么看](docs/zh-cn/stock-monitor.md)

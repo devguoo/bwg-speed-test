@@ -18,7 +18,8 @@
 2. 再看[库存监控](https://www.bwhguide.com/tools/stock-monitor/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_flow_stock)，确认热门套餐是否有货。
 3. 如果还在 CN2 GIA-E、香港、东京、大阪、新加坡之间犹豫，阅读[机房选择说明](zh-cn/datacenters.md)。
 4. 如果你想自己验证当前网络到各机房的延迟，回到 GitHub 仓库运行 `test.sh`。
-5. 最后进入[套餐和机房选择页](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_flow_plans)核对价格、付款周期和可选机房。
+5. 测完以后看[测速结果怎么对应套餐选择](zh-cn/result-to-plan.md)，把延迟、timeout、库存和预算放到同一个判断里。
+6. 最后进入[套餐和机房选择页](https://www.bwhguide.com/plans/?utm_source=github&utm_medium=pages&utm_campaign=bwg_speed_test&utm_content=pages_home_flow_plans)核对价格、付款周期和可选机房。
 
 ## 常见搜索问题
 
@@ -26,6 +27,7 @@
 |---|---|
 | 搬瓦工哪个机房适合中国用户？ | [搬瓦工机房怎么选](zh-cn/datacenters.md) |
 | 搬瓦工测速和测试 IP 怎么看？ | [搬瓦工测速和测试 IP 怎么用](zh-cn/speed-test-guide.md) |
+| 测速结果出来后应该买哪款？ | [测速结果怎么对应套餐选择](zh-cn/result-to-plan.md) |
 | CN2 GIA-E、香港、东京、大阪、新加坡有什么区别？ | [CN2 GIA-E 线路说明](zh-cn/cn2-gia.md) |
 | 新加坡 SG_8 要不要买？ | [新加坡 CN2 GIA / SG_8 购买前怎么看](zh-cn/singapore.md) |
 | 搬瓦工缺货时怎么看替代方案？ | [库存和补货怎么看](zh-cn/stock-monitor.md) |
@@ -54,6 +56,7 @@
 |---|---|
 | [搬瓦工机房怎么选](zh-cn/datacenters.md) | 购买前比较机房、线路和访问区域 |
 | [搬瓦工测速和测试 IP 怎么用](zh-cn/speed-test-guide.md) | 自己测试延迟前先理解测速结果怎么解读 |
+| [测速结果怎么对应套餐选择](zh-cn/result-to-plan.md) | 跑完测速后，把延迟结果转成购买前判断 |
 | [CN2 GIA-E、香港、东京、大阪、新加坡怎么理解](zh-cn/cn2-gia.md) | 解释常见线路和亚洲机房选择 |
 | [新加坡 CN2 GIA / SG_8 购买前怎么看](zh-cn/singapore.md) | 判断新加坡新机房是否值得优先关注 |
 | [库存和补货怎么看](zh-cn/stock-monitor.md) | 热门套餐缺货时准备替代方案 |
